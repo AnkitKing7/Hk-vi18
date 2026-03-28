@@ -44,7 +44,7 @@
 - # Create service file
 sudo nano /etc/systemd/system/vps-bot.service
 
-```[Unit]
+[Unit]
 Description=VPS Management Bot
 After=network.target docker.service
 Requires=docker.service
@@ -58,7 +58,7 @@ Restart=always
 RestartSec=10
 
 [Install]
-WantedBy=multi-user.target```
+WantedBy=multi-user.target
 
 ### Install Docker
 ```bash
@@ -66,7 +66,7 @@ WantedBy=multi-user.target```
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker $USER
-newgrp docker```
+newgrp docker
 
 # Verify installation
 ```docker --version```
